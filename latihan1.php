@@ -20,7 +20,7 @@
         font-size: 2rem;
         font-weight: bold;
         font-style: oblique;
-        color: #00f;
+        color: #ff0;
     }
 
     #genap {
@@ -39,8 +39,8 @@
     }
 
     .kotak1 {
-        background-color: #ff0;
-        width: 200px;
+        background-color: #00f;
+        width: 300px;
         height: 100px;
         text-align: center;
     }
@@ -109,6 +109,16 @@
             echo "<div class='usia'>$key</div>";
         }
 
+        function genap_ganjil($_b){
+            if ($_b % 2 == 0) {
+                echo "<div class='kotak1'>Bilangan Genap</div>";
+            }
+            else {
+                echo "<div class='kotak1>Bilangan Ganjil</div>";
+            }
+        }
+
+        genap_ganjil(12);
     ?>
 
 </body>
