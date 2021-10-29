@@ -48,7 +48,7 @@
     MariaDB [(none)]>
     
     ya, mungkin kode sebelumnya masih ada tapi kurang lebih seperti itu intinya
-    7. Selamat anda sudah berhasil masuk ke mysql mode awal, untuk masuk menjadi admin diperlukan beberapa langkah lagi, selamat mencari :)
+    7. Selamat anda sudah berhasil masuk ke mysql mode awal sebagai admin, jika ingin masuk sebagai guest ya ndak usah masukkan -u -p, hehe
 -->
 </body>
 

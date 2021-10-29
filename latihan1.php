@@ -108,7 +108,7 @@
         foreach ($kotak as $key) {
             echo "<div class='usia'>$key</div>";
         }
-
+        
         function genap_ganjil($_b){
             if ($_b % 2 == 0) {
                 echo "<div class='kotak1'>Bilangan Genap</div>";
