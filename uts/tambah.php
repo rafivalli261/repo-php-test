@@ -1,4 +1,12 @@
 <?php 
+    session_start();
+    if (!isset($_SESSION["login"])) {
+        echo "
+            <script>
+	            document.location.href = 'login.php';
+            </script>
+              "; 
+    }
     require 'functions.php';
     //cek apakah tombol submit telah ditekan atau belum
     if(isset($_POST["submit"])){

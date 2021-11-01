@@ -1,4 +1,12 @@
 <?php 
+    session_start();
+    if (!isset($_SESSION["login"])) {
+        echo "
+            <script>
+	            document.location.href = 'login.php';
+            </script>
+              "; 
+    }
     require 'functions.php';
     $menu_rafi = query("SELECT * FROM menu");
 ?>
@@ -18,6 +26,7 @@
 <body>
     <h1>Administrator</h1>
     <a href="tambah.php" class="tambah">Tambah Makanan</a>
+    <a href="logout.php" class="logout">Logout</a>
     <div class="container">
         <table>
             <tr>

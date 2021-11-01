@@ -55,3 +55,18 @@ a.tambah:hover {
 	transform: scale(1.2);
 	transition: all 0.3s ease;
 }
+a.logout {
+	font-size: 1.1rem;
+	background-color: rgb(236, 9, 58);
+	color: #fff;
+	padding: 0.5rem;
+	margin: 3rem 1rem;
+	text-decoration: none;
+	border-radius: 10px;
+}
+
+a.logout:hover {
+	box-shadow: 5px 5px 3px #f0f;
+	transform: scale(1.2);
+	transition: all 0.3s ease;
+}

@@ -2,10 +2,10 @@
     require 'functions.php';
 
     if (isset($_POST["register"])) {
-        if(registrasi($_POST) > 0){
+        if (registrasi($_POST) > 0){
             echo "<script>
                     alert('User Baru Berhasil Ditambahkan');
-                  </script>";
+                  </script";
         }else{
             echo mysqli_error($conn);
         }

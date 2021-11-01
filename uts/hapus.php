@@ -1,4 +1,12 @@
-<?php 
+<?php
+    session_start();
+    if (!isset($_SESSION["login"])) {
+        echo "
+            <script>
+	            document.location.href = 'login.php';
+            </script>
+              "; 
+    }
     require 'functions.php';
     $id = $_GET["id"];
     if(hapus($id) > 0){
