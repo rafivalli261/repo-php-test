@@ -50,35 +50,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubah Data</title>
+    <link rel="stylesheet" href="css/tambah.css">
+
 </head>
 
 <body>
-    <h1>Ubah Data Makanan</h1>
-    <form action="" method="POST">
-        <table>
-            <tr>
-                <td><input type="hidden" name="id" value="<?= $mkn["id"]?>">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="nama">Nama Makanan : </label></td>
-                <td><input type="text" name="nama" id="nama" autocomplete="off" required value="<?= $mkn["nama"]?>">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="harga">Harga Makanan : </label></td>
-                <td><input type="text" name="harga" id="harga" autocomplete="off" required value="<?= $mkn["harga"]?>">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="foto">Foto Makanan : </label></td>
-                <td><input type="text" name="foto" id="foto" autocomplete="off" required value="<?= $mkn["foto"]?>">
-                </td>
-            </tr>
-        </table>
-        <button type="submit" name="submit">Submit</button>
-        <button type="reset">Reset</button>
-    </form>
+    <div>
+        <h1>Ubah Data Makanan</h1>
+        <form action="" method="POST">
+            <input type="hidden" name="id" value="<?= $mkn["id"]?>">
+            <label for="nama">Nama Makanan : </label>
+            <input type="text" name="nama" id="nama" autocomplete="off" required value="<?= $mkn["nama"]?>">
+
+            <label for="harga">Harga Makanan : </label>
+            <input type="text" name="harga" id="harga" autocomplete="off" required value="<?= $mkn["harga"]?>">
+
+            <label for="foto">Foto Makanan : </label>
+            <input type="text" name="foto" id="foto" autocomplete="off" required value="<?= $mkn["foto"]?>">
+
+            <button type="submit" name="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
 </body>
 
 </html>

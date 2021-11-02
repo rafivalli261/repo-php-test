@@ -30,11 +30,11 @@
     <div class="container">
         <table>
             <tr>
-                <th>id</th>
-                <th>nama makanan</th>
-                <th>harga</th>
-                <th>foto</th>
-                <th>aksi</th>
+                <th>Id</th>
+                <th>Nama Makanan</th>
+                <th>Harga</th>
+                <th>Foto</th>
+                <th>Aksi</th>
             </tr>
             <?php $i = 1; ?>
             <?php foreach($menu_rafi as $row) : ?>
