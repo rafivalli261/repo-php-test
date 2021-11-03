@@ -103,4 +103,13 @@
         return mysqli_affected_rows($conn);
     }
 
+    //cari
+    function cari($keyword){
+        $query = "SELECT * FROM menu
+                    WHERE
+                    nama LIKE '%$keyword%' OR harga LIKE '%$keyword%'
+                    ";
+        return query($query);
+    }
+
 ?>

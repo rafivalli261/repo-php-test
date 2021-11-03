@@ -64,19 +64,21 @@ section {
 }
 
 .nav-link:hover {
-	color: #482ff7;
+	color: #4ea4dc;
 }
 
 .nav-logo {
 	font-size: 2.1rem;
 	font-weight: 500;
-	color: #482ff7;
+	color: #4ea4dc;
 }
 
 /* Nav End */
 
 /* Slideshow Start */
-
+#home {
+	background-color: #ebb6b4;
+}
 .container-satu {
 	padding-top: 20px;
 	display: flex;
@@ -124,7 +126,7 @@ section {
 
 .manual-btn {
 	display: none;
-	border: 2px solid #482ff7;
+	border: 2px solid #4ea4dc;
 	padding: 5px;
 	border-radius: 50%;
 	cursor: pointer;
@@ -136,7 +138,7 @@ section {
 } */
 
 .manual-btn:hover {
-	background: #482ff7;
+	background: #4ea4dc;
 }
 
 #radio1:checked ~ .first {
@@ -192,7 +194,7 @@ section {
 #hero {
 	display: flex;
 	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.05);
+	background-color: rgb(238, 214, 204);
 }
 
 .container-dua {
@@ -236,6 +238,9 @@ section {
 
 /* Dish Start */
 
+#dishes {
+	background-color: #ebb6b4;
+}
 .container-tiga {
 	display: flex;
 	flex-direction: column;
@@ -257,7 +262,7 @@ section {
 }
 
 .card {
-	background: wheat;
+	background: rgb(250, 218, 212);
 	width: 300px;
 	margin: 10px;
 	border-radius: 15px;
@@ -287,8 +292,8 @@ section {
 }
 
 .card:hover {
-	background-color: rgb(62, 62, 62);
-	color: salmon;
+	background-color: rgb(241, 112, 103);
+	color: rgb(250, 218, 212);
 	cursor: pointer;
 	transform: scale(1.03);
 	transition: all 1s ease;
@@ -299,7 +304,7 @@ section {
 /* Order Start */
 
 #order {
-	background-color: rgba(0, 0, 0, 0.05);
+	background-color: rgb(238, 214, 204);
 }
 
 .container-empat {
@@ -381,7 +386,7 @@ footer p {
 		border-radius: 10px;
 		text-align: center;
 		transition: 0.3s;
-		box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 10px 27px #ece;
 	}
 
 	.nav-menu.active {

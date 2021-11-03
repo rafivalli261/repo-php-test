@@ -9,6 +9,20 @@
     }
     require 'functions.php';
     $menu_rafi = query("SELECT * FROM menu");
+
+    //jika tombol cari ditekan
+    if (isset($_POST['cari'])) {
+        $menu_rafi = cari($_POST["keyword"]);
+        if ($menu_rafi == NULL) {
+        echo "
+            <script>
+            alert('Data Tidak Diketemukan!');
+	        document.location.href = 'admin.php';
+            </script>
+              "; 
+        }
+    }
+ 
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +33,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS Admin -->
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin.css" type="text/css">
     <title>Admin Restoran</title>
 </head>
 
@@ -28,8 +42,8 @@
     <a href="tambah.php" class="tambah">Tambah Makanan</a>
     <a href="logout.php" class="logout">Logout</a>
     <form action="" method="POST">
-        <button type="submit">Cari Data</button>
-        <input type="text" name="cari">
+        <button type="submit" name="cari">Cari Data</button>
+        <input type="text" name="keyword" placeholder="Ketikkan kata kunci .." autocomplete="off">
     </form>
     <div class="container">
         <table>

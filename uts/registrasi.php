@@ -20,28 +20,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-    <h1>Halaman Registrasi</h1>
-    <form action="" method="POST">
-        <table>
-            <tr>
-                <td><label for="username">Username : </label></td>
-                <td><input type="text" name="username" id="username" required autocomplete="off"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password : </label></td>
-                <td><input type="password" name="password" id="password" required autocomplete="off"></td>
-            </tr>
-            <tr>
-                <td><label for="password2">Konfirmasi Password : </label></td>
-                <td><input type="password" name="password2" id="password2" required autocomplete="off"></td>
-            </tr>
-        </table>
-        <button type="submit" name="register">Daftar!</button>
-        <button type="reset">Reset</button>
-    </form>
+    <div class="container">
+        <h1>Halaman Registrasi</h1>
+        <form action="" method="POST">
+            <label for="username">Username : </label>
+            <input type="text" name="username" id="username" required autocomplete="off">
+
+
+            <label for="password">Password : </label>
+            <input type="password" name="password" id="password" required autocomplete="off">
+
+
+            <label for="password2">Konfirmasi Password : </label>
+            <input type="password" name="password2" id="password2" required autocomplete="off">
+
+            <button type="submit" name="register">Daftar!</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
 </body>
 
 </html>

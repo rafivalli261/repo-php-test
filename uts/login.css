@@ -64,6 +64,21 @@ button[type="submit"] {
 button[type="submit"]:hover {
 	background-color: #92c5e9;
 }
+button[type="reset"] {
+	border: none;
+	cursor: pointer;
+	padding: 0.6rem;
+	margin: 0.2rem;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 1.5rem;
+	color: white;
+	background-color: #4ea4dc;
+	border-radius: 10px;
+}
+
+button[type="reset"]:hover {
+	background-color: #92c5e9;
+}
 
 .container form span label {
 	font-size: 1.2rem;

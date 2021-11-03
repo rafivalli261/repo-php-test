@@ -2,9 +2,10 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 body {
-	background-color: #eee;
+	background-color: rgb(245, 213, 245);
 }
 
 table {
@@ -17,7 +18,7 @@ td,
 th {
 	border: 2px solid black;
 	border-collapse: collapse;
-	font-family: sans-serif;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 	font-size: 2rem;
 }
 
@@ -74,10 +75,9 @@ a.logout:hover {
 
 form {
 	display: inline-block;
-	margin: 0.7rem;
-	border-radius: 10px;
 }
-form button {
+
+button[type="submit"] {
 	font-size: 1.08rem;
 	padding: 12px 20px;
 	border: none;
@@ -87,9 +87,19 @@ form button {
 	color: azure;
 }
 
+button[type="submit"]:hover {
+	background-color: rgb(142, 62, 247);
+}
+
 form input[type="text"] {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	padding: 12px 20px;
 	font-size: 1.08rem;
 	background-color: antiquewhite;
+	border: none;
+	border-radius: 10px;
+}
+
+form input[type="text"]:focus {
+	border: 3px solid rgb(142, 62, 247);
 }
