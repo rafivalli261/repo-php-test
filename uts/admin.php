@@ -19,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS Admin -->
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="admin.css">
     <title>Admin Restoran</title>
 </head>
 
@@ -27,10 +27,14 @@
     <h1>Administrator</h1>
     <a href="tambah.php" class="tambah">Tambah Makanan</a>
     <a href="logout.php" class="logout">Logout</a>
+    <form action="" method="POST">
+        <button type="submit">Cari Data</button>
+        <input type="text" name="cari">
+    </form>
     <div class="container">
         <table>
             <tr>
-                <th>Id</th>
+                <th>No</th>
                 <th>Nama Makanan</th>
                 <th>Harga</th>
                 <th>Foto</th>

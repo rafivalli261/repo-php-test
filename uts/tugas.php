@@ -1,9 +1,10 @@
 <?php 
     //membuat koneksi antara database dengan file php
     $conn = mysqli_connect("localhost","root","", "bertaniilmu");
-    $panen = mysqli_query($conn, "SELECT * FROM datapanen");
-    $tanam = query("SELECT * FROM datapanen");
+    $panen = mysqli_query($conn, "SELECT * FROM datapanen"); //return object
+    $tanam = query("SELECT * FROM datapanen"); //return array dari mysqli_fetch_asosoc
     var_dump($tanam);
+    
     function query($query){
         global $conn;
         $result = mysqli_query($conn, $query);

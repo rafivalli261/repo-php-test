@@ -71,3 +71,25 @@ a.logout:hover {
 	transform: scale(1.2);
 	transition: all 0.3s ease;
 }
+
+form {
+	display: inline-block;
+	margin: 0.7rem;
+	border-radius: 10px;
+}
+form button {
+	font-size: 1.08rem;
+	padding: 12px 20px;
+	border: none;
+	background-color: rgb(159, 87, 252);
+	cursor: pointer;
+	border-radius: 20px;
+	color: azure;
+}
+
+form input[type="text"] {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 12px 20px;
+	font-size: 1.08rem;
+	background-color: antiquewhite;
+}

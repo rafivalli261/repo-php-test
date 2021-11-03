@@ -74,30 +74,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Login</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-    <h1>Halaman Login</h1>
-    <?php if(isset ($error) ) : ?>
-    <p>Username / Password Salah</p>
-    <?php endif ?>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td><label for="username">Username : </label></td>
-                <td><input type="text" name="username" id="username" required autocomplete="off"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password : </label></td>
-                <td><input type="password" name="password" id="password" required autocomplete="off"></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="remember" id="remember"><label for="remember">Remember Me</label></td>
-            </tr>
-        </table>
+    <div class="container">
+        <h1>Halaman Login</h1>
+        <?php if(isset ($error) ) : ?>
+        <p>Username / Password Salah</p>
+        <?php endif ?>
+        <form action="" method="post">
+            <input type="text" name="username" id="username" required autocomplete="off" placeholder="Username">
+            <input type="password" name="password" id="password" required autocomplete="off" placeholder="Password">
+            <span>
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Remember Me</label>
+            </span>
+            <br>
+            <button type="submit" name="login">Link Start</button>
+        </form>
 
-        <button type="submit" name="login">Login</button>
-    </form>
+    </div>
 </body>
 
 </html>
