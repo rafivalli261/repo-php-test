@@ -57,8 +57,9 @@
 <body>
     <div>
         <h1>Ubah Data Makanan</h1>
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= $mkn["id"]?>">
+            <input type="hidden" name="fotoLama" value="<?= $mkn["foto"]?>">
             <label for="nama">Nama Makanan : </label>
             <input type="text" name="nama" id="nama" autocomplete="off" required value="<?= $mkn["nama"]?>">
 
@@ -66,8 +67,8 @@
             <input type="text" name="harga" id="harga" autocomplete="off" required value="<?= $mkn["harga"]?>">
 
             <label for="foto">Foto Makanan : </label>
-            <input type="text" name="foto" id="foto" autocomplete="off" required value="<?= $mkn["foto"]?>">
-
+            <input type="file" name="foto" id="foto" autocomplete="off">
+            <img src="image/<?= $mkn['foto'];?>" alt="">
             <button type="submit" name="submit">Submit</button>
             <button type="reset">Reset</button>
         </form>

@@ -39,11 +39,44 @@ button[type="reset"] {
 
 button[type="submit"]:hover,
 button[type="reset"]:hover {
-	background-color: #4ea4dc;
+	background-color: #99d1f7;
 }
 
 div {
 	border-radius: 5px;
 	background-color: #ede;
 	padding: 20px;
+}
+
+input[type="file"] {
+	font-size: 1.1rem;
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1.3rem;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	outline: none;
+	background-color: #ebb4eb;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	background-color: #4ea4dc;
+	color: white;
+	padding: 14px 20px;
+	margin: 0.5rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	box-sizing: border-box;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+	background-color: #81ecec;
+	transition: all 1s ease;
 }

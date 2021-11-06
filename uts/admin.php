@@ -9,7 +9,7 @@
     }
     require 'functions.php';
     $menu_rafi = query("SELECT * FROM menu");
-
+    $admin = $_SESSION["jeneng"]; 
     //jika tombol cari ditekan
     if (isset($_POST['cari'])) {
         $menu_rafi = cari($_POST["keyword"]);
@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <h1>Administrator</h1>
+    <h1>Sugeng Rawuh, <?= $admin; ?> </h1>
     <a href="tambah.php" class="tambah">Tambah Makanan</a>
     <a href="logout.php" class="logout">Logout</a>
     <form action="" method="POST">

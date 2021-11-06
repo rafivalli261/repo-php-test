@@ -5,12 +5,9 @@
     if(isset($_COOKIE["dragonslash"]) && isset($_COOKIE["xiao"])){
         $dragonslah = $_COOKIE["dragonslash"];
         $xiao = $_COOKIE["xiao"];
-
         //ambil username berdasarkan id
         $result = mysqli_query($conn, "SELECT username FROM users WHERE id = $dragonslash");
-
         $row = mysqli_fetch_assoc($result);
-
         // cek cookie dan username
         if($xiao === hash('sha256', $row['username'])){
             $_SESSION["login"] = true;
@@ -44,7 +41,8 @@
 
                 // set sessionnya
                 $_SESSION["login"] = true;
-
+                $_SESSION["jeneng"] = $_POST['username'];
+                
                 //set remember me
                 if (isset($_POST["remember"])) {
                     //buat cookienya
@@ -54,13 +52,12 @@
 
                 echo "
                     <script>
-	                    // alert('Login Sukses!');
+	                    
 	                    document.location.href = 'admin.php';
                     </script>
                     "; 
             }
         }
-
         $error = true;
     }
 

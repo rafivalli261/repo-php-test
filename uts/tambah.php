@@ -49,13 +49,13 @@
 <body>
     <div>
         <h1>Tambah Data Makanan</h1>
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             <label for="nama">Nama Makanan : </label>
             <input type="text" name="nama" id="nama" autocomplete="off" required>
             <label for="harga">Harga Makanan : </label>
             <input type="text" name="harga" id="harga" autocomplete="off" required>
-            <label for="foto">Foto Makanan : </label>
-            <input type="text" name="foto" id="foto" autocomplete="off" required>
+            <label for="fotos">Foto Makanan : </label>
+            <input type="file" name="foto" id="foto" required>
             <button type="submit" name="submit">Submit</button>
             <button type="reset">Reset</button>
         </form>

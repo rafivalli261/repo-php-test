@@ -35,7 +35,11 @@
         //mengatasi user iseng -> htmlspecialchars
         $nama = htmlspecialchars($data["nama"]);
         $harga = htmlspecialchars($data["harga"]);
-        $foto = htmlspecialchars($data["foto"]);
+        //unggah foto
+        $foto = unggah();
+        if(!$foto){
+            return false;
+        }
 
         $query = "INSERT INTO menu
                     VALUES
@@ -43,6 +47,52 @@
         mysqli_query($conn, $query);
 
         return mysqli_affected_rows($conn);
+    }
+
+    function unggah(){
+
+        $namaFile = $_FILES['foto']['name'];
+        $ukuranFile = $_FILES['foto']['size'];
+        $error = $_FILES['foto']['error'];
+        $tmpName = $_FILES['foto']['tmp_name'];
+        
+        //cek apakah tidak ada gambar yang diupload
+        if($error === 4){
+            echo "<script>
+                alert('Pilih Gambar!');
+            </script>";
+            return false;
+        }
+
+        //cek apakah yang diupload adalah gambar
+        $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+        $ekstensiGambar = explode('.', $namaFile);
+        $ekstensiGambar = strtolower(end($ekstensiGambar));
+        if(!in_array($ekstensiGambar, $ekstensiGambarValid)){
+            echo "<script>
+                alert('File yang diunggah bukan gambar!');
+            </script>";
+            return false;
+        }
+
+        //cek jika ukurannya terlalu besar
+        if ($ukuranFile > 1000000) {
+            echo "<script>
+                alert('Ukuran Gambar Terlalu Besar!');
+            </script>";
+            return false;
+        }
+
+        //lolos pengecekan, foto siap diunggah
+        //generate nama foto baru
+        $namaFileBaru = uniqid();
+        $namaFileBaru .= '.';
+        $namaFileBaru .= $ekstensiGambar;
+
+        move_uploaded_file($tmpName,'image/' . $namaFileBaru);
+
+        return $namaFileBaru;
+
     }
 
     function hapus($id){
@@ -57,7 +107,13 @@
         $id = $data["id"];
         $nama = htmlspecialchars($data["nama"]);
         $harga = htmlspecialchars($data["harga"]);
-        $foto = htmlspecialchars($data["foto"]);
+        $fotoLama = htmlspecialchars($data["fotoLama"]);
+        //cek apakah user pilih gambar baru / tidak
+        if ($_FILES['foto']['error'] == 4) {
+            $foto = $fotoLama;
+        }else{
+            $foto = unggah();
+        }
 
         $query = "UPDATE menu SET 
                     nama = '$nama',

@@ -43,6 +43,9 @@
                 <li class="nav-item">
                     <a href="#order" class="nav-link">Order</a>
                 </li>
+                <li class="nav-item">
+                    <a href="login.php" class="nav-link">Login</a>
+                </li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
