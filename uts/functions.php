@@ -121,10 +121,12 @@
                     foto = '$foto'
                   WHERE id = $id
                     ";
+                    
         mysqli_query($conn, $query);
 
         return mysqli_affected_rows($conn);
     }
+
     function registrasi($data){
         global $conn;
         

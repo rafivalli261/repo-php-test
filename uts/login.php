@@ -3,8 +3,10 @@
     require 'functions.php';
     //cek cookie
     if(isset($_COOKIE["dragonslash"]) && isset($_COOKIE["xiao"])){
+        
         $dragonslah = $_COOKIE["dragonslash"];
         $xiao = $_COOKIE["xiao"];
+
         //ambil username berdasarkan id
         $result = mysqli_query($conn, "SELECT username FROM users WHERE id = $dragonslash");
         $row = mysqli_fetch_assoc($result);
