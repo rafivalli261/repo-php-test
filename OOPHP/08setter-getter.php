@@ -71,7 +71,6 @@ class Produk{
             return $this->harga - ($this->harga * $this->diskon / 100);
         }
 
-        
     }
 
     class Komik extends Produk{
